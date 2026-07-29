@@ -49,6 +49,8 @@ h1 b{font-weight:650;background:linear-gradient(90deg,var(--gold),#ffb37a);-webk
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
 .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 22px;padding:44px 28px}
+.stat b.rng{font-size:29px;letter-spacing:0}
+.stat .rng ~ i{letter-spacing:1.6px;font-size:10px}
 .stat b{display:block;font-size:34px;color:var(--gold);font-weight:700;letter-spacing:.5px}
 .stat i{display:block;font-style:normal;font-size:10.5px;letter-spacing:2.4px;color:var(--teal);font-weight:600;margin-top:7px}
 .stat span{font-size:12px;color:var(--dim);letter-spacing:.3px;line-height:1.5;display:block;margin-top:9px;font-weight:300}
@@ -85,8 +87,18 @@ h2 b{font-weight:650;color:var(--gold)}
 .eng-tags span{font-size:11.5px;letter-spacing:1px;color:var(--teal);background:rgba(255,122,47,.07);border:1px solid rgba(255,122,47,.25);border-radius:14px;padding:6px 13px;text-transform:uppercase}
 
 .engage{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.engage .cols{grid-template-columns:1fr 1fr}
+.engage .cols{grid-template-columns:repeat(3,1fr)}
+.engage .cols.two{grid-template-columns:repeat(2,1fr)}
 .engage .card .ic{font-size:13px;letter-spacing:2px;color:var(--teal);font-weight:600}
+.tier{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:38px 0 18px;display:flex;align-items:baseline;gap:12px}
+.tier:first-of-type{margin-top:8px}
+.tier span{font-size:11px;letter-spacing:1.4px;color:var(--faint);font-weight:400;text-transform:none}
+.cols.two{grid-template-columns:repeat(2,1fr)}
+.speaking{margin-top:40px;padding:20px 24px;border:1px solid var(--line);border-radius:12px;font-size:15px;color:var(--dim);font-weight:300}
+.speaking b{color:var(--ink);font-weight:500}
+.speaking a{color:var(--gold);text-decoration:none}
+@media(max-width:1080px){.engage .cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:780px){.cols.two,.engage .cols,.engage .cols.two{grid-template-columns:1fr}}
 .ctaband{margin-top:44px;background:var(--panel);border:1px solid rgba(255,122,47,.28);border-radius:16px;padding:30px 34px;display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
 .cta-h{font-size:22px;font-weight:500;color:var(--ink)}
 .cta-s{font-size:14px;color:var(--dim);font-weight:300;margin-top:6px}
@@ -158,9 +170,9 @@ footer a{color:var(--gold);text-decoration:none}
 <header class="hero" id="top">
 <div class="orb a"></div><div class="orb b"></div><div class="gridbg"></div>
 <div class="wrap">
-<div class="kicker rv on">Executive briefing · Customer programs · Agentic AI</div>
+<div class="kicker rv on">Executive conversations · Customer programs · Agentic AI</div>
 <h1 class="rv on d1">I architect the experiences and conversations that build <b>trust</b> with customers, and the AI systems that run them.</h1>
-<p class="sub rv on d2">Executive briefing and customer programs leader across Cisco, Teradata, and NetApp. Nine-figure deal rooms, award-winning program rebuilds, and a working agentic briefing practice most operators haven't seen yet.</p>
+<p class="sub rv on d2">I run the rooms where a company's most important customers decide whether to trust it. The discipline is called executive briefing, and I have led it at Cisco, Teradata, and NetApp. Nine-figure deal rooms, award-winning rebuilds, and a working agentic practice most operators haven't seen yet.</p>
 <div class="meta rv on d3">San Francisco Bay Area &nbsp;·&nbsp; open to Director-level executive programs roles</div>
 <a class="cta rv on d3" href="#contact">Get in touch <span>→</span></a>
 </div>
@@ -171,9 +183,9 @@ footer a{color:var(--gold);text-decoration:none}
 <div class="stat rv"><b data-count="9">9</b><i>CISCO</i><span>Customer Experience Centers led globally, with an 8-figure flagship rebuild</span></div>
 <div class="stat rv d1"><b data-count="97">97</b><i>TERADATA</i><span>World-Class NPS held by the customer advocacy program I led</span></div>
 <div class="stat rv d2"><b>#1</b><i>TERADATA</i><span>Marketing-sourced pipeline company-wide, up from unranked</span></div>
-<div class="stat rv d3"><b>$100M+</b><i>TERADATA</i><span>Enterprise deal won after the briefing our CEO asked me to run</span></div>
-<div class="stat rv d3"><b>$1B+</b><i>NETAPP</i><span>Cloud sales pipeline influenced by the one-to-many program I built</span></div>
-<div class="stat rv d3"><b data-count="120">120</b><i>NETAPP</i><span>Executive briefings a year, leading the Americas engagement function</span></div>
+<div class="stat rv d3"><b>$150M+</b><i>TERADATA</i><span>Enterprise deal won after the briefing our CEO asked me to run</span></div>
+<div class="stat rv d3"><b>$1B+</b><i>CISCO &nbsp;·&nbsp; TERADATA &nbsp;·&nbsp; NETAPP</i><span>Revenue pipeline influenced across the three programs I have led</span></div>
+<div class="stat rv d3"><b class="rng">150&ndash;1,600</b><i>CISCO &nbsp;·&nbsp; TERADATA &nbsp;·&nbsp; NETAPP</i><span>Executive briefings a year across the programs I have run</span></div>
 </div></div>
 
 <section id="work"><div class="wrap">
@@ -204,9 +216,9 @@ footer a{color:var(--gold);text-decoration:none}
 <h2 class="rv">The <b>record</b></h2>
 <div class="timeline">
 <div class="trow rv"><div class="org">Customer Programs &amp; AI Advisory<span>Founder &amp; Principal · Mar 2026 &ndash; present</span></div><p>Advisory practice building executive engagement programs and the agentic systems that run them, for technology companies bringing AI to their most important customers.</p></div>
-<div class="trow rv"><div class="org">Cisco<span>Sr Manager, Executive Briefing Programs · Sep 2025 &ndash; Mar 2026</span></div><p>Nine Customer Experience Centers across the Americas, Europe, and APJC, an 18-person team, and an 8-figure flagship rebuild. Kicked off the AI pilot work that became the spine of the practice I run now.</p></div>
-<div class="trow rv"><div class="org">Teradata<span>Director, Global Executive Briefing Centers · Jun 2022 &ndash; Sep 2025</span></div><p>Led executive briefings, customer advocacy, and the customer reference program behind them. World-Class NPS of 97, the company's number one source of marketing-sourced pipeline, and the briefing our CEO personally asked me to run when a nine-figure deal came down to a single visit.</p></div>
-<div class="trow rv"><div class="org">NetApp<span>Sr Manager, Executive Engagements, Americas · Sep 2019 &ndash; Jun 2022</span></div><p>Led the Americas engagement function through the company's pivot to cloud, and built an invite-only Cloud Technology Board from a blank sheet with Fortune 500 technology leaders in the seats.</p></div>
+<div class="trow rv"><div class="org">Cisco<span>Global Head, Cisco Experience Centers · Sep 2025 &ndash; Mar 2026</span></div><p>Nine Customer Experience Centers across the Americas, Europe, and APJC, an 18-person team, and an 8-figure flagship rebuild. Kicked off the AI pilot work that became the spine of the practice I run now.</p></div>
+<div class="trow rv"><div class="org">Teradata<span>Director, Customer Advocacy &amp; Executive Briefing Centers · Jun 2022 &ndash; Sep 2025</span></div><p>Led executive briefings, customer advocacy, and the customer reference program behind them. World-Class NPS of 97, the company's number one source of marketing-sourced pipeline, and the briefing our CEO personally asked me to run when a nine-figure deal came down to a single visit.</p></div>
+<div class="trow rv"><div class="org">NetApp<span>Senior Manager, Executive Engagements, Americas · Sep 2019 &ndash; Jun 2022</span></div><p>Led the Americas engagement function through the company's pivot to cloud, and built an invite-only Cloud Technology Board from a blank sheet with Fortune 500 technology leaders in the seats.</p></div>
 </div>
 <div class="exitrow rv d2"><a href="https://linkedin.com/in/andrew-hahm" target="_blank" rel="noopener">Full history on LinkedIn <span>&#8599;</span></a><a href="#contact">Start a conversation <span>&#8594;</span></a></div>
 </div></section>
@@ -256,17 +268,34 @@ footer a{color:var(--gold);text-decoration:none}
 
 <section id="engage" class="engage"><div class="wrap">
 <h2 class="rv"><b>Services</b></h2>
-<p class="lede rv d1">Four ways in, depending on where you are. One meeting, one program, or an ongoing hand on the wheel.</p>
+<p class="lede rv d1">Three levels of commitment. Start with a day, a program, or a standing seat at the table.</p>
+
+<div class="tier rv">Start here <span>days, fixed scope</span></div>
 <div class="cols">
-<div class="card rv"><div class="ic">01</div><h3>ONE BRIEFING, END TO END</h3><p>The meeting you cannot afford to get wrong. Your most important customer, the investor you need to convince, the account you are trying to win back. I run the whole thing: the research on who is walking in, the agenda, the narrative, the prep for your executives, and the follow-up that keeps it alive. You walk in ready.</p></div>
-<div class="card rv d1"><div class="ic">02</div><h3>PROGRAM BUILD</h3><p>Stand up an executive briefing or customer advocacy program from zero, or turn around one that isn't earning its budget. The intake, the run of show, the measurement, and the case that keeps it funded.</p></div>
-<div class="card rv d2"><div class="ic">03</div><h3>EXECUTIVE COACHING</h3><p>Prepare your leadership team for the rooms that decide deals. Dossiers on who is walking in, the questions worth asking, and the coaching that moves an executive off the standard pitch and into a real conversation.</p></div>
-<div class="card rv d3"><div class="ic">04</div><h3>AI ENABLEMENT</h3><p>Bring agentic AI into customer programs without losing the human judgment that makes them work. Briefing prep, advocacy operations, and customer signal, built as systems your team can run and audit.</p></div>
+<div class="card rv"><div class="ic">01</div><h3>WORKSHOPS &amp; TRAINING</h3><p>A half day or a full day with your team. Briefing facilitation, executive prep that moves a leader off the standard pitch, designing a customer advisory board, or bringing agentic AI into customer programs. Your people leave able to run it.</p></div>
+<div class="card rv d1"><div class="ic">02</div><h3>FACILITATION, ONE SESSION</h3><p>An outside facilitator for the room that matters. An advisory board, a customer summit, an executive offsite. I run the conversation so your leaders can be in it instead of managing it.</p></div>
+<div class="card rv d2"><div class="ic">03</div><h3>PROGRAM ASSESSMENT</h3><p>Two weeks, a fixed fee, and an honest read on the program you already have. What it costs, what it returns, where it leaks, and the shortest path to it earning its budget. You get the roadmap whether or not you hire me to run it.</p></div>
 </div>
+
+<div class="tier rv">Build it <span>weeks to months</span></div>
+<div class="cols">
+<div class="card rv"><div class="ic">04</div><h3>ONE BRIEFING, END TO END</h3><p>The meeting you cannot afford to get wrong. Your most important customer, the investor you need to convince, the account you are trying to win back. I run the research, the agenda, the narrative, the executive prep, and the follow-up that keeps it alive.</p></div>
+<div class="card rv d1"><div class="ic">05</div><h3>PROGRAM BUILD OR TURNAROUND</h3><p>Stand up an executive briefing or customer advocacy program from zero, or turn around one that isn't earning its budget. The intake, the run of show, the measurement, and the case that keeps it funded.</p></div>
+<div class="card rv d2"><div class="ic">06</div><h3>CUSTOMER ADVISORY BOARDS</h3><p>Design, recruit, and run an invite-only board your customers actually want a seat on. From the member profile and the charter through the first meeting and what happens in the eleven months after it.</p></div>
+</div>
+
+<div class="tier rv">Run it with you <span>ongoing</span></div>
+<div class="cols two">
+<div class="card rv"><div class="ic">07</div><h3>EXECUTIVE PREP &amp; COACHING</h3><p>Standing support for the rooms that decide deals. Dossiers on who is walking in, the questions worth asking, and the coaching that gets an executive into a real conversation instead of a presentation.</p></div>
+<div class="card rv d1"><div class="ic">08</div><h3>AI ENABLEMENT</h3><p>Bring agentic AI into customer programs without losing the human judgment that makes them work. Briefing prep, advocacy operations, and customer signal, built as systems your team can run and audit.</p></div>
+</div>
+
+<div class="speaking rv d1">Also available for <b>speaking, panels, and podcasts</b> on executive engagement and what AI is actually doing to it. <a href="#contact">Get in touch</a>.</div>
+
 <div class="ctaband rv d2">
 <div>
-<div class="cta-h">Have a room coming up?</div>
-<div class="cta-s">Call or text and we can scope it in ten minutes. I answer everything myself.</div>
+<div class="cta-h">Start with twenty minutes</div>
+<div class="cta-s">A meeting you cannot get wrong, a program that isn't earning its keep, or a team that needs to get better at this. Tell me which one and I will tell you what I would do. That part is on me.</div>
 </div>
 <div class="cta-links">
 <a href="tel:+16504794311">(650) 479-4311</a>

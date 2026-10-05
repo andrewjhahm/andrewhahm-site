@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Room, One Day, a Year of Progress | Andrew Hahm</title>
+<meta name="description" content="An executive briefing is not a meeting or a tour. It is decision compression. Why that framing decides what a program measures, and what it asks AI to do.">
+<meta property="og:title" content="One Room, One Day, a Year of Progress">
+<meta property="og:description" content="An executive briefing is not a meeting or a tour. It is decision compression. Why that framing decides what a program measures, and what it asks AI to do.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://andrewhahm.com/writing/one-room-one-day-a-year-of-progress/">
+<style>
+:root{--bg:#050506;--bg2:#0b0b0d;--panel:#111114;--line:rgba(255,255,255,.07);--ink:#e9edf6;--dim:#8a93ab;--faint:#59627a;--gold:#ff7a2f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+::selection{background:rgba(255,122,47,.3)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,6,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:Outfit,Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
+.logo .wm-l{font-weight:200}.logo .wm-b{font-weight:700}.logo .wm-d{font-weight:700;color:var(--gold)}
+nav a.lnk{font-size:13px;color:var(--dim);text-decoration:none;margin-left:26px;letter-spacing:.6px;transition:color .25s}
+nav a.lnk:hover{color:var(--gold)}
+nav a.lnk.here{color:var(--gold)}
+.article{max-width:720px;margin:0 auto;padding:130px 28px 90px}
+.kicker{font-size:13px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;font-weight:500}
+h1{font-size:42px;font-weight:300;line-height:1.16;letter-spacing:-.8px}
+h1 b{font-weight:700}
+.meta{color:var(--faint);font-size:14px;margin-top:18px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+.meta a{color:var(--dim);text-decoration:none}
+.hero-fig{margin:34px 0 0}
+.hero-fig svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px}
+.hero-fig .k{stroke:#e9edf6;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.hero-fig .kf{fill:#e9edf6;opacity:.85}
+.hero-fig .kl{stroke:#e9edf6;stroke-width:2;fill:none;opacity:.3}
+.hero-fig .d{stroke:#8a93ab;stroke-width:1.5;fill:none;stroke-dasharray:3 7}
+.hero-fig .e{stroke:#ff7a2f;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-fig .ef{fill:#ff7a2f}
+.hero-fig .t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:1.5px;fill:#8a93ab}
+.hero-fig .t.i{fill:#e9edf6}
+.body{margin-top:38px;font-size:17.5px;font-weight:300;color:var(--ink)}
+.body p{margin-bottom:24px}
+.body b{font-weight:700;color:#fff}
+.body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,122,47,.35)}
+.body h2{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:44px 0 18px}
+.body figure{margin:38px 0}
+.body figure svg{width:100%;height:auto;display:block}
+.body figcaption{color:var(--faint);font-size:13px;margin-top:12px;letter-spacing:.3px;font-weight:400}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+.card .n{font-size:11px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;font-weight:600}
+.card h3{font-size:17px;font-weight:600;margin:8px 0 6px;color:#fff;line-height:1.3}
+.body .card p{font-size:14px;color:var(--dim);margin:0;line-height:1.5}
+.card .does{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.4px;color:var(--ink);font-weight:400}
+.card.hot{border-color:rgba(255,122,47,.55)}
+.card.hot .n{color:var(--gold)}
+.g4 .card{padding:18px 14px}
+.g4 .card h3{font-size:15.5px}
+.rows{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rows .r{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:14px 18px;background:var(--panel);border-top:1px solid var(--line);font-size:14.5px;line-height:1.5}
+.rows .r:first-child{border-top:0}
+.rows .r b{color:#fff;font-weight:600}
+.rows .r span{color:var(--dim)}
+.rows .r.hot b{color:var(--gold)}
+.rows.c3 .r{grid-template-columns:160px 1fr 1fr}
+.rows .r.hd{background:transparent;font-size:11px;letter-spacing:2.5px;text-transform:uppercase}
+.rows .r.hd b,.rows .r.hd span{color:var(--faint);font-weight:600}
+.pull{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:21px;color:#c9cfdd;border-left:2px solid var(--gold);padding-left:22px;margin:34px 0}
+.sig{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);color:var(--dim);font-size:15px}
+.sig .fwd{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.next{background:var(--bg2);border-top:1px solid var(--line);padding:54px 0}
+.next .inner{max-width:720px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.next p{color:var(--dim);font-size:15px;max-width:420px}
+.next a.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:11px 22px;font-size:14px;letter-spacing:.6px;border-radius:4px;transition:all .25s}
+.next a.btn:hover{background:var(--gold);color:#050506}
+footer{padding:44px 0;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--faint);font-size:12px;letter-spacing:.4px}
+footer a{color:var(--dim);text-decoration:none}
+@media(max-width:780px){h1{font-size:32px}.article{padding-top:110px}.g2,.g3,.g4{grid-template-columns:1fr}.rows .r,.rows.c3 .r{grid-template-columns:1fr;gap:4px}.rows .r.hd{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/"><span class="wm-l">andrew</span><span class="wm-b">hahm</span><span class="wm-d">.</span></a><div>
+<a class="lnk" href="/#work">What I do</a><a class="lnk" href="/#advisory">Advising</a><a class="lnk here" href="/writing/">Writing</a><a class="lnk" href="/#contact">Contact</a>
+</div></div></nav>
+
+<article class="article">
+<div class="kicker">Operator Notes · The function</div>
+<h1>One Room, One Day, a Year of <b>Progress.</b></h1>
+<div class="meta">Andrew Hahm · April 2026 · 3 minute read</div>
+
+<figure class="hero-fig">
+<svg viewBox="0 0 1200 600" role="img" aria-label="Twelve small dots along a long faint line, each connected by a thin line down to a single orange dot: a year of process compressed into one day." xmlns="http://www.w3.org/2000/svg">
+<defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity=".06"/></pattern></defs>
+<rect width="1200" height="600" fill="#0b0b0d"/>
+<rect width="1200" height="520" fill="url(#dots)"/>
+<line class="kl" x1="160" y1="170" x2="1040" y2="170"/>
+<path class="kl" d="M160 170 L600 400 M240 170 L600 400 M320 170 L600 400 M400 170 L600 400 M480 170 L600 400 M560 170 L600 400 M640 170 L600 400 M720 170 L600 400 M800 170 L600 400 M880 170 L600 400 M960 170 L600 400 M1040 170 L600 400"/>
+<circle class="kf" cx="160" cy="170" r="6"/><circle class="kf" cx="240" cy="170" r="6"/><circle class="kf" cx="320" cy="170" r="6"/><circle class="kf" cx="400" cy="170" r="6"/><circle class="kf" cx="480" cy="170" r="6"/><circle class="kf" cx="560" cy="170" r="6"/><circle class="kf" cx="640" cy="170" r="6"/><circle class="kf" cx="720" cy="170" r="6"/><circle class="kf" cx="800" cy="170" r="6"/><circle class="kf" cx="880" cy="170" r="6"/><circle class="kf" cx="960" cy="170" r="6"/><circle class="kf" cx="1040" cy="170" r="6"/>
+<circle class="ef" cx="600" cy="400" r="18"/>
+<text class="t" x="160" y="138">A YEAR OF EMAILS, CALLS AND COMMITTEES</text>
+<text class="t i" x="640" y="406">ONE DAY</text>
+<rect y="520" width="1200" height="80" fill="#050506"/>
+<line x1="0" y1="520" x2="1200" y2="520" stroke="#ffffff" opacity=".07"/>
+<text x="48" y="569" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="24" fill="#c9cfdd">The room was never the product. The decision is.</text>
+<text x="1152" y="569" text-anchor="end" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#8a93ab">ah.</text>
+</svg>
+</figure>
+
+<div class="body">
+
+<p>Ask ten companies what their executive briefing center is for and you will hear about showcasing innovation, telling the company story, and hosting customers well. All true, and none of it is the job.</p>
+
+<p>Strip a briefing down to its function and it is not a meeting or a tour. It is decision compression. One room, one day, a year's worth of progress.</p>
+
+<h2>What gets compressed</h2>
+
+<p>A large enterprise decision normally sprawls. Months of emails. Calls that end in "let's take that offline." A committee that needs one more review. Each step is reasonable and the sum is slow, and slow is where deals quietly die.</p>
+
+<p>A briefing collapses that. The people who can decide are in one place, with the people who can answer, prepared for the same conversation, on the same day. Questions that would have taken three weeks of scheduling get answered across a table in ten minutes. Objections come out while there is still someone present who can resolve them.</p>
+
+<figure>
+<svg viewBox="0 0 720 220" role="img" aria-label="Two bars. Without the room, a decision takes a long bar of months. With the room, one short bar: a single prepared day." xmlns="http://www.w3.org/2000/svg">
+<g font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+<text x="40" y="34" font-size="12" letter-spacing="2" fill="#59627a">WITHOUT THE ROOM</text>
+<rect x="40" y="48" width="640" height="36" rx="5" fill="none" stroke="#e9edf6" stroke-width="2" opacity=".8"/>
+<path d="M93 48 V84 M147 48 V84 M200 48 V84 M253 48 V84 M307 48 V84 M360 48 V84 M413 48 V84 M467 48 V84 M520 48 V84 M573 48 V84 M627 48 V84" stroke="#e9edf6" stroke-width="1" opacity=".25"/>
+<text x="40" y="108" font-size="15" fill="#8a93ab">Months of email, calls and committee reviews</text>
+<text x="40" y="150" font-size="12" letter-spacing="2" fill="#59627a">WITH THE ROOM</text>
+<rect x="40" y="164" width="54" height="36" rx="5" fill="#ff7a2f"/>
+<text x="110" y="188" font-size="16" font-weight="700" fill="#e9edf6">One prepared day</text>
+</g>
+</svg>
+<figcaption>Same decision. The difference is who is in the room, how prepared they are, and whether the day was built to end in a decision.</figcaption>
+</figure>
+
+<p>I have run the version of this where the stakes were explicit. At Teradata, our CEO asked me personally to run a briefing when a nine-figure deal came down to a single visit. Nobody in the building thought of that day as hospitality.</p>
+
+<h2>Why the framing matters</h2>
+
+<p>What you think a program is for decides what you optimize. If a briefing is a showcase, you measure attendance and polish the demos. If it is a meeting, you count how many you held. If it is decision compression, different questions come first.</p>
+
+<p>What decision is this customer facing? Who has to be in the room for it to be made? What does each of them need to hear, and from whom? What will be agreed before they leave?</p>
+
+<p>An agenda designed from those questions looks different from one assembled out of available speakers. It is also why I put <a href="/writing/their-voice-first/">the customer's voice first</a>.</p>
+
+<h2>It matters more with AI in the picture</h2>
+
+<p>This is the first thing I settle before bringing AI into a program, because it sets what the system is asked to do. Point it at "more briefings" or "faster decks" and you will get exactly that: an efficient factory for events nobody needed. Point it at better-prepared rooms and more decisions reached, and the same technology does something worth paying for.</p>
+
+<p>The room was never the product. The decision is.</p>
+
+</div>
+<div class="sig"><span class="fwd">Always forward</span><br><br>If you run customer programs or executive engagement and you are working through this inside your own team, I'd like to compare notes.</div>
+</article>
+
+<div class="next"><div class="inner">
+<p>Operator Notes is where I write about customer programs, operator judgment, and agentic AI in production. New pieces land here first.</p>
+<a class="btn" href="/writing/">More Operator Notes</a>
+</div></div>
+
+<footer><div class="wrap">
+<span>© 2026 Andrew J. Hahm</span>
+<span><a href="/">andrewhahm.com</a> · <a href="https://linkedin.com/in/andrew-hahm">LinkedIn</a></span>
+</div></footer>
+</body>
+</html>

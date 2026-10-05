@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Workflow. One Skill. One Number. | Andrew Hahm</title>
+<meta name="description" content="Most AI plans for customer programs fail on scope. How to start with one workflow, what the first ninety days should produce, and why you define the kill signal first.">
+<meta property="og:title" content="One Workflow. One Skill. One Number.">
+<meta property="og:description" content="Most AI plans for customer programs fail on scope. How to start with one workflow, what the first ninety days should produce, and why you define the kill signal first.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://andrewhahm.com/writing/one-workflow-one-skill-one-number/">
+<style>
+:root{--bg:#050506;--bg2:#0b0b0d;--panel:#111114;--line:rgba(255,255,255,.07);--ink:#e9edf6;--dim:#8a93ab;--faint:#59627a;--gold:#ff7a2f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+::selection{background:rgba(255,122,47,.3)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,6,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:Outfit,Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
+.logo .wm-l{font-weight:200}.logo .wm-b{font-weight:700}.logo .wm-d{font-weight:700;color:var(--gold)}
+nav a.lnk{font-size:13px;color:var(--dim);text-decoration:none;margin-left:26px;letter-spacing:.6px;transition:color .25s}
+nav a.lnk:hover{color:var(--gold)}
+nav a.lnk.here{color:var(--gold)}
+.article{max-width:720px;margin:0 auto;padding:130px 28px 90px}
+.kicker{font-size:13px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;font-weight:500}
+h1{font-size:42px;font-weight:300;line-height:1.16;letter-spacing:-.8px}
+h1 b{font-weight:700}
+.meta{color:var(--faint);font-size:14px;margin-top:18px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+.meta a{color:var(--dim);text-decoration:none}
+.hero-fig{margin:34px 0 0}
+.hero-fig svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px}
+.hero-fig .k{stroke:#e9edf6;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.hero-fig .kf{fill:#e9edf6;opacity:.85}
+.hero-fig .kl{stroke:#e9edf6;stroke-width:2;fill:none;opacity:.3}
+.hero-fig .d{stroke:#8a93ab;stroke-width:1.5;fill:none;stroke-dasharray:3 7}
+.hero-fig .e{stroke:#ff7a2f;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-fig .ef{fill:#ff7a2f}
+.hero-fig .t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:1.5px;fill:#8a93ab}
+.hero-fig .t.i{fill:#e9edf6}
+.body{margin-top:38px;font-size:17.5px;font-weight:300;color:var(--ink)}
+.body p{margin-bottom:24px}
+.body b{font-weight:700;color:#fff}
+.body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,122,47,.35)}
+.body h2{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:44px 0 18px}
+.body figure{margin:38px 0}
+.body figure svg{width:100%;height:auto;display:block}
+.body figcaption{color:var(--faint);font-size:13px;margin-top:12px;letter-spacing:.3px;font-weight:400}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+.card .n{font-size:11px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;font-weight:600}
+.card h3{font-size:17px;font-weight:600;margin:8px 0 6px;color:#fff;line-height:1.3}
+.body .card p{font-size:14px;color:var(--dim);margin:0;line-height:1.5}
+.card .does{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.4px;color:var(--ink);font-weight:400}
+.card.hot{border-color:rgba(255,122,47,.55)}
+.card.hot .n{color:var(--gold)}
+.g4 .card{padding:18px 14px}
+.g4 .card h3{font-size:15.5px}
+.rows{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rows .r{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:14px 18px;background:var(--panel);border-top:1px solid var(--line);font-size:14.5px;line-height:1.5}
+.rows .r:first-child{border-top:0}
+.rows .r b{color:#fff;font-weight:600}
+.rows .r span{color:var(--dim)}
+.rows .r.hot b{color:var(--gold)}
+.rows.c3 .r{grid-template-columns:160px 1fr 1fr}
+.rows .r.hd{background:transparent;font-size:11px;letter-spacing:2.5px;text-transform:uppercase}
+.rows .r.hd b,.rows .r.hd span{color:var(--faint);font-weight:600}
+.pull{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:21px;color:#c9cfdd;border-left:2px solid var(--gold);padding-left:22px;margin:34px 0}
+.sig{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);color:var(--dim);font-size:15px}
+.sig .fwd{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.next{background:var(--bg2);border-top:1px solid var(--line);padding:54px 0}
+.next .inner{max-width:720px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.next p{color:var(--dim);font-size:15px;max-width:420px}
+.next a.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:11px 22px;font-size:14px;letter-spacing:.6px;border-radius:4px;transition:all .25s}
+.next a.btn:hover{background:var(--gold);color:#050506}
+footer{padding:44px 0;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--faint);font-size:12px;letter-spacing:.4px}
+footer a{color:var(--dim);text-decoration:none}
+@media(max-width:780px){h1{font-size:32px}.article{padding-top:110px}.g2,.g3,.g4{grid-template-columns:1fr}.rows .r,.rows.c3 .r{grid-template-columns:1fr;gap:4px}.rows .r.hd{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/"><span class="wm-l">andrew</span><span class="wm-b">hahm</span><span class="wm-d">.</span></a><div>
+<a class="lnk" href="/#work">What I do</a><a class="lnk" href="/#advisory">Advising</a><a class="lnk here" href="/writing/">Writing</a><a class="lnk" href="/#contact">Contact</a>
+</div></div></nav>
+
+<article class="article">
+<div class="kicker">Operator Notes · The AI, in production</div>
+<h1>One Workflow. One Skill. One <b>Number.</b></h1>
+<div class="meta">Andrew Hahm · August 2026 · 3 minute read</div>
+
+<figure class="hero-fig">
+<svg viewBox="0 0 1200 600" role="img" aria-label="A grid of eighteen open squares. A single one is filled orange: the one workflow to start with." xmlns="http://www.w3.org/2000/svg">
+<defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity=".06"/></pattern></defs>
+<rect width="1200" height="600" fill="#0b0b0d"/>
+<rect width="1200" height="520" fill="url(#dots)"/>
+<rect class="k" x="290" y="115" width="70" height="70" rx="8"/><rect class="k" x="400" y="115" width="70" height="70" rx="8"/><rect class="k" x="510" y="115" width="70" height="70" rx="8"/><rect class="k" x="620" y="115" width="70" height="70" rx="8"/><rect class="k" x="730" y="115" width="70" height="70" rx="8"/><rect class="k" x="840" y="115" width="70" height="70" rx="8"/>
+<rect class="k" x="290" y="225" width="70" height="70" rx="8"/><rect class="k" x="400" y="225" width="70" height="70" rx="8"/><rect class="ef" x="510" y="225" width="70" height="70" rx="8"/><rect class="k" x="620" y="225" width="70" height="70" rx="8"/><rect class="k" x="730" y="225" width="70" height="70" rx="8"/><rect class="k" x="840" y="225" width="70" height="70" rx="8"/>
+<rect class="k" x="290" y="335" width="70" height="70" rx="8"/><rect class="k" x="400" y="335" width="70" height="70" rx="8"/><rect class="k" x="510" y="335" width="70" height="70" rx="8"/><rect class="k" x="620" y="335" width="70" height="70" rx="8"/><rect class="k" x="730" y="335" width="70" height="70" rx="8"/><rect class="k" x="840" y="335" width="70" height="70" rx="8"/>
+<text class="t" x="290" y="452">EVERYTHING YOU COULD AUTOMATE</text>
+<text class="t i" x="950" y="266">START HERE</text>
+<rect y="520" width="1200" height="80" fill="#050506"/>
+<line x1="0" y1="520" x2="1200" y2="520" stroke="#ffffff" opacity=".07"/>
+<text x="48" y="569" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="24" fill="#c9cfdd">Pick one workflow. Build one skill. Measure the gap.</text>
+<text x="1152" y="569" text-anchor="end" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#8a93ab">ah.</text>
+</svg>
+</figure>
+
+<div class="body">
+
+<p>Most AI plans for customer programs fail on scope. Someone draws the full picture: research, intake, agendas, recaps, analytics, targeting, all automated, live by the end of the year. It gets approved because it is impressive, and it stalls because nothing in it is small enough to finish.</p>
+
+<p>The approach that works is the opposite, and it fits in one line. Pick one workflow, build one skill, measure the gap.</p>
+
+<h2>Monday</h2>
+
+<p><b>Pick the workflow.</b> Not five. The one that consumes the most manual time on your team today. For most briefing programs that is executive research or the post-briefing recap. Time it for a week. That is your baseline.</p>
+
+<p><b>Build the skill once.</b> Whoever does the building, wrap that one workflow so an operator can run it without writing a prompt. Plan on about two weeks, including the back-and-forth with the people who do the work today. Their corrections are what make it good.</p>
+
+<p><b>Measure the gap.</b> Time it again. Grade the output against your written standard. Then decide what to build next, with evidence.</p>
+
+<figure>
+<div class="grid g3">
+<div class="card hot"><span class="n">Crawl</span><h3>One workflow</h3><p>Stand up the system with its connections and customer memory. Deploy the single most time-expensive workflow. Hand-grade a past quarter for the baseline.</p><span class="does">Months 1 to 3</span></div>
+<div class="card"><span class="n">Walk</span><h3>Close the loop</h3><p>Add intake and the post-briefing loop. Measure again. The difference is your proof.</p><span class="does">Months 4 to 6</span></div>
+<div class="card"><span class="n">Run</span><h3>Earn the rest</h3><p>Add analytics, then the others, one at a time. Launch two that work and earn the mandate for the rest.</p><span class="does">Months 6 to 12</span></div>
+</div>
+<figcaption>A year, sequenced so that every stage pays for the next one.</figcaption>
+</figure>
+
+<h2>Ninety days, one result</h2>
+
+<p>The output of the first ninety days is not a platform. It is a number: hours saved, quality held or better, throughput rising, on one real program. A measured result on your own work beats any vendor benchmark, because nobody can argue with it and nobody else has it.</p>
+
+<h2>Define the kill signal first</h2>
+
+<p>Before you start, write down what failure looks like. Proof is a clear before-and-after difference in good briefings delivered, plus at least one business outcome moving. If the lift is inside the noise, a small gain with no movement in deal velocity or win rate, the first workflow was probably the wrong one. It is far cheaper to learn that on one program than on five.</p>
+
+<p>Deciding this in advance is what makes a lukewarm result useful instead of a sunk cost you keep defending.</p>
+
+<p>The teams that get this right are not the ones with the biggest plan. They build one skill at a time, in production, with operators in the loop.</p>
+
+</div>
+<div class="sig"><span class="fwd">Always forward</span><br><br>If you run customer programs or executive engagement and you are working through this inside your own team, I'd like to compare notes.</div>
+</article>
+
+<div class="next"><div class="inner">
+<p>Operator Notes is where I write about customer programs, operator judgment, and agentic AI in production. New pieces land here first.</p>
+<a class="btn" href="/writing/">More Operator Notes</a>
+</div></div>
+
+<footer><div class="wrap">
+<span>© 2026 Andrew J. Hahm</span>
+<span><a href="/">andrewhahm.com</a> · <a href="https://linkedin.com/in/andrew-hahm">LinkedIn</a></span>
+</div></footer>
+</body>
+</html>

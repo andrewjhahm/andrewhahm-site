@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Model Is Shared. The Harness Is Yours. | Andrew Hahm</title>
+<meta name="description" content="Why handing a briefing team a powerful AI tool is not a strategy, and the eight layers of the system they need instead.">
+<meta property="og:title" content="The Model Is Shared. The Harness Is Yours.">
+<meta property="og:description" content="Why handing a briefing team a powerful AI tool is not a strategy, and the eight layers of the system they need instead.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://andrewhahm.com/writing/the-model-is-shared-the-harness-is-yours/">
+<style>
+:root{--bg:#050506;--bg2:#0b0b0d;--panel:#111114;--line:rgba(255,255,255,.07);--ink:#e9edf6;--dim:#8a93ab;--faint:#59627a;--gold:#ff7a2f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+::selection{background:rgba(255,122,47,.3)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,6,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:Outfit,Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
+.logo .wm-l{font-weight:200}.logo .wm-b{font-weight:700}.logo .wm-d{font-weight:700;color:var(--gold)}
+nav a.lnk{font-size:13px;color:var(--dim);text-decoration:none;margin-left:26px;letter-spacing:.6px;transition:color .25s}
+nav a.lnk:hover{color:var(--gold)}
+nav a.lnk.here{color:var(--gold)}
+.article{max-width:720px;margin:0 auto;padding:130px 28px 90px}
+.kicker{font-size:13px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;font-weight:500}
+h1{font-size:42px;font-weight:300;line-height:1.16;letter-spacing:-.8px}
+h1 b{font-weight:700}
+.meta{color:var(--faint);font-size:14px;margin-top:18px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+.meta a{color:var(--dim);text-decoration:none}
+.hero-fig{margin:34px 0 0}
+.hero-fig svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px}
+.hero-fig .k{stroke:#e9edf6;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.hero-fig .kf{fill:#e9edf6;opacity:.85}
+.hero-fig .kl{stroke:#e9edf6;stroke-width:2;fill:none;opacity:.3}
+.hero-fig .d{stroke:#8a93ab;stroke-width:1.5;fill:none;stroke-dasharray:3 7}
+.hero-fig .e{stroke:#ff7a2f;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-fig .ef{fill:#ff7a2f}
+.hero-fig .t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:1.5px;fill:#8a93ab}
+.hero-fig .t.i{fill:#e9edf6}
+.body{margin-top:38px;font-size:17.5px;font-weight:300;color:var(--ink)}
+.body p{margin-bottom:24px}
+.body b{font-weight:700;color:#fff}
+.body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,122,47,.35)}
+.body h2{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:44px 0 18px}
+.body figure{margin:38px 0}
+.body figure svg{width:100%;height:auto;display:block}
+.body figcaption{color:var(--faint);font-size:13px;margin-top:12px;letter-spacing:.3px;font-weight:400}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+.card .n{font-size:11px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;font-weight:600}
+.card h3{font-size:17px;font-weight:600;margin:8px 0 6px;color:#fff;line-height:1.3}
+.body .card p{font-size:14px;color:var(--dim);margin:0;line-height:1.5}
+.card .does{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.4px;color:var(--ink);font-weight:400}
+.card.hot{border-color:rgba(255,122,47,.55)}
+.card.hot .n{color:var(--gold)}
+.g4 .card{padding:18px 14px}
+.g4 .card h3{font-size:15.5px}
+.rows{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rows .r{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:14px 18px;background:var(--panel);border-top:1px solid var(--line);font-size:14.5px;line-height:1.5}
+.rows .r:first-child{border-top:0}
+.rows .r b{color:#fff;font-weight:600}
+.rows .r span{color:var(--dim)}
+.rows .r.hot b{color:var(--gold)}
+.rows.c3 .r{grid-template-columns:160px 1fr 1fr}
+.rows .r.hd{background:transparent;font-size:11px;letter-spacing:2.5px;text-transform:uppercase}
+.rows .r.hd b,.rows .r.hd span{color:var(--faint);font-weight:600}
+.pull{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:21px;color:#c9cfdd;border-left:2px solid var(--gold);padding-left:22px;margin:34px 0}
+.sig{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);color:var(--dim);font-size:15px}
+.sig .fwd{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.next{background:var(--bg2);border-top:1px solid var(--line);padding:54px 0}
+.next .inner{max-width:720px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.next p{color:var(--dim);font-size:15px;max-width:420px}
+.next a.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:11px 22px;font-size:14px;letter-spacing:.6px;border-radius:4px;transition:all .25s}
+.next a.btn:hover{background:var(--gold);color:#050506}
+footer{padding:44px 0;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--faint);font-size:12px;letter-spacing:.4px}
+footer a{color:var(--dim);text-decoration:none}
+@media(max-width:780px){h1{font-size:32px}.article{padding-top:110px}.g2,.g3,.g4{grid-template-columns:1fr}.rows .r,.rows.c3 .r{grid-template-columns:1fr;gap:4px}.rows .r.hd{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/"><span class="wm-l">andrew</span><span class="wm-b">hahm</span><span class="wm-d">.</span></a><div>
+<a class="lnk" href="/#work">What I do</a><a class="lnk" href="/#advisory">Advising</a><a class="lnk here" href="/writing/">Writing</a><a class="lnk" href="/#contact">Contact</a>
+</div></div></nav>
+
+<article class="article">
+<div class="kicker">Operator Notes · The AI, in production</div>
+<h1>The Model Is Shared. The Harness Is <b>Yours.</b></h1>
+<div class="meta">Andrew Hahm · May 2026 · 3 minute read</div>
+
+<figure class="hero-fig">
+<svg viewBox="0 0 1200 600" role="img" aria-label="Five identical open circles in a row for the shared model. A single orange frame surrounds the middle one: the harness." xmlns="http://www.w3.org/2000/svg">
+<defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity=".06"/></pattern></defs>
+<rect width="1200" height="600" fill="#0b0b0d"/>
+<rect width="1200" height="520" fill="url(#dots)"/>
+<circle class="k" cx="220" cy="250" r="28"/><circle class="k" cx="410" cy="250" r="28"/><circle class="k" cx="600" cy="250" r="28"/><circle class="k" cx="790" cy="250" r="28"/><circle class="k" cx="980" cy="250" r="28"/>
+<rect class="e" x="515" y="165" width="170" height="170" rx="20"/>
+<text class="t" x="192" y="352">THE SAME MODEL, EVERYWHERE</text>
+<text class="t i" x="600" y="140" text-anchor="middle">YOUR HARNESS</text>
+<rect y="520" width="1200" height="80" fill="#050506"/>
+<line x1="0" y1="520" x2="1200" y2="520" stroke="#ffffff" opacity=".07"/>
+<text x="48" y="569" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="24" fill="#c9cfdd">The model is shared. The harness is yours.</text>
+<text x="1152" y="569" text-anchor="end" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#8a93ab">ah.</text>
+</svg>
+</figure>
+
+<div class="body">
+
+<p>When a team gets curious about agentic AI, the default move is to hand everyone a powerful AI tool and call it a strategy. For engineers, that works. For a briefing team, it stalls inside a month.</p>
+
+<p>Specialists do not write code, and they should not have to write prompts either. They run workflows. What they need is a system already loaded with the work they do every week: the briefing intake, the executive research, the recap, the customer history, the connections to CRM and calendar.</p>
+
+<h2>Two definitions worth holding</h2>
+
+<p><b>Agentic AI</b> is what you get when you wrap a model in a harness: tools, memory, file access, the ability to hand work to other agents. The model does the reasoning. The harness does the work. Without the harness you have a chatbot. With it you have a worker.</p>
+
+<p><b>Headless</b> means the harness runs in the background. A briefing request lands, a calendar invite arrives, an executive replies, and a workflow fires. The system surfaces only what needs a person's judgment. It is not a thing you use. It is a thing you have configured.</p>
+
+<p>Every company can rent the same model. That part is shared, and it gets cheaper every quarter. What nobody else has is your harness: your intake questions, your standard for a good executive bio, your account history. Put the engineering effort there, not into teaching specialists a new tool.</p>
+
+<h2>The stack, layer by layer</h2>
+
+<figure>
+<div class="rows c3">
+<div class="r hd"><b>Layer</b><span>What it does</span><span>Who owns it</span></div>
+<div class="r"><b>Model</b><span>The reasoning.</span><span>A vendor decision</span></div>
+<div class="r hot"><b>Harness</b><span>The wrapper the whole team works in.</span><span>Head of the program</span></div>
+<div class="r"><b>Connectors</b><span>Plumbing to CRM, calendar, files and chat.</span><span>Operations</span></div>
+<div class="r"><b>Skills</b><span>Workflows the team triggers: intake, bio, agenda, recap.</span><span>Managers, with operations</span></div>
+<div class="r"><b>Subagents</b><span>Workers the system dispatches: research, assembly, recap.</span><span>Whoever designs the skills</span></div>
+<div class="r"><b>Memory</b><span>Customer history, executive preferences, account relationships.</span><span>Engagement managers</span></div>
+<div class="r"><b>Plugins</b><span>Bundles of skills for field teams and regions.</span><span>Head of the program</span></div>
+<div class="r"><b>Observability</b><span>What the agents did, how often, at what cost.</span><span>Director, weekly</span></div>
+</div>
+<figcaption>Eight layers. The team only ever sees two of them: the harness and the skills.</figcaption>
+</figure>
+
+<h2>What makes it compound</h2>
+
+<p>A static harness rots. The gains come from skills that improve. Every time a skill misses, with a thin bio or a recap in the wrong tone, the correction goes back into the skill and not just into that one output. The first version of a skill gives you a decent draft. By the third, the corrections are small.</p>
+
+<p>That is the return worth explaining to a CFO. Your specialists' first-draft quality climbs every quarter while their hours stay flat.</p>
+
+<p>Do not give your specialists a coding tool. Give them a harness that already knows the job, and keep building the harness.</p>
+
+</div>
+<div class="sig"><span class="fwd">Always forward</span><br><br>If you run customer programs or executive engagement and you are working through this inside your own team, I'd like to compare notes.</div>
+</article>
+
+<div class="next"><div class="inner">
+<p>Operator Notes is where I write about customer programs, operator judgment, and agentic AI in production. New pieces land here first.</p>
+<a class="btn" href="/writing/">More Operator Notes</a>
+</div></div>
+
+<footer><div class="wrap">
+<span>© 2026 Andrew J. Hahm</span>
+<span><a href="/">andrewhahm.com</a> · <a href="https://linkedin.com/in/andrew-hahm">LinkedIn</a></span>
+</div></footer>
+</body>
+</html>

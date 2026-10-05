@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Briefing Should Send Something Back | Andrew Hahm</title>
+<meta name="description" content="Most briefing programs send a story in one direction. The fifth thing a program can deliver, why it never got built, and what changes now.">
+<meta property="og:title" content="A Briefing Should Send Something Back">
+<meta property="og:description" content="Most briefing programs send a story in one direction. The fifth thing a program can deliver, why it never got built, and what changes now.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://andrewhahm.com/writing/a-briefing-should-send-something-back/">
+<style>
+:root{--bg:#050506;--bg2:#0b0b0d;--panel:#111114;--line:rgba(255,255,255,.07);--ink:#e9edf6;--dim:#8a93ab;--faint:#59627a;--gold:#ff7a2f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+::selection{background:rgba(255,122,47,.3)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,6,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:Outfit,Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
+.logo .wm-l{font-weight:200}.logo .wm-b{font-weight:700}.logo .wm-d{font-weight:700;color:var(--gold)}
+nav a.lnk{font-size:13px;color:var(--dim);text-decoration:none;margin-left:26px;letter-spacing:.6px;transition:color .25s}
+nav a.lnk:hover{color:var(--gold)}
+nav a.lnk.here{color:var(--gold)}
+.article{max-width:720px;margin:0 auto;padding:130px 28px 90px}
+.kicker{font-size:13px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;font-weight:500}
+h1{font-size:42px;font-weight:300;line-height:1.16;letter-spacing:-.8px}
+h1 b{font-weight:700}
+.meta{color:var(--faint);font-size:14px;margin-top:18px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+.meta a{color:var(--dim);text-decoration:none}
+.hero-fig{margin:34px 0 0}
+.hero-fig svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px}
+.hero-fig .k{stroke:#e9edf6;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.hero-fig .kf{fill:#e9edf6;opacity:.85}
+.hero-fig .kl{stroke:#e9edf6;stroke-width:2;fill:none;opacity:.3}
+.hero-fig .d{stroke:#8a93ab;stroke-width:1.5;fill:none;stroke-dasharray:3 7}
+.hero-fig .e{stroke:#ff7a2f;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-fig .ef{fill:#ff7a2f}
+.hero-fig .t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:1.5px;fill:#8a93ab}
+.hero-fig .t.i{fill:#e9edf6}
+.body{margin-top:38px;font-size:17.5px;font-weight:300;color:var(--ink)}
+.body p{margin-bottom:24px}
+.body b{font-weight:700;color:#fff}
+.body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,122,47,.35)}
+.body h2{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:44px 0 18px}
+.body figure{margin:38px 0}
+.body figure svg{width:100%;height:auto;display:block}
+.body figcaption{color:var(--faint);font-size:13px;margin-top:12px;letter-spacing:.3px;font-weight:400}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+.card .n{font-size:11px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;font-weight:600}
+.card h3{font-size:17px;font-weight:600;margin:8px 0 6px;color:#fff;line-height:1.3}
+.body .card p{font-size:14px;color:var(--dim);margin:0;line-height:1.5}
+.card .does{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.4px;color:var(--ink);font-weight:400}
+.card.hot{border-color:rgba(255,122,47,.55)}
+.card.hot .n{color:var(--gold)}
+.g4 .card{padding:18px 14px}
+.g4 .card h3{font-size:15.5px}
+.rows{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rows .r{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:14px 18px;background:var(--panel);border-top:1px solid var(--line);font-size:14.5px;line-height:1.5}
+.rows .r:first-child{border-top:0}
+.rows .r b{color:#fff;font-weight:600}
+.rows .r span{color:var(--dim)}
+.rows .r.hot b{color:var(--gold)}
+.rows.c3 .r{grid-template-columns:160px 1fr 1fr}
+.rows .r.hd{background:transparent;font-size:11px;letter-spacing:2.5px;text-transform:uppercase}
+.rows .r.hd b,.rows .r.hd span{color:var(--faint);font-weight:600}
+.pull{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:21px;color:#c9cfdd;border-left:2px solid var(--gold);padding-left:22px;margin:34px 0}
+.sig{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);color:var(--dim);font-size:15px}
+.sig .fwd{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.next{background:var(--bg2);border-top:1px solid var(--line);padding:54px 0}
+.next .inner{max-width:720px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.next p{color:var(--dim);font-size:15px;max-width:420px}
+.next a.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:11px 22px;font-size:14px;letter-spacing:.6px;border-radius:4px;transition:all .25s}
+.next a.btn:hover{background:var(--gold);color:#050506}
+footer{padding:44px 0;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--faint);font-size:12px;letter-spacing:.4px}
+footer a{color:var(--dim);text-decoration:none}
+@media(max-width:780px){h1{font-size:32px}.article{padding-top:110px}.g2,.g3,.g4{grid-template-columns:1fr}.rows .r,.rows.c3 .r{grid-template-columns:1fr;gap:4px}.rows .r.hd{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/"><span class="wm-l">andrew</span><span class="wm-b">hahm</span><span class="wm-d">.</span></a><div>
+<a class="lnk" href="/#work">What I do</a><a class="lnk" href="/#advisory">Advising</a><a class="lnk here" href="/writing/">Writing</a><a class="lnk" href="/#contact">Contact</a>
+</div></div></nav>
+
+<article class="article">
+<div class="kicker">Operator Notes · The function</div>
+<h1>A Briefing Should Send Something <b>Back.</b></h1>
+<div class="meta">Andrew Hahm · September 2026 · 3 minute read</div>
+
+<figure class="hero-fig">
+<svg viewBox="0 0 1200 600" role="img" aria-label="A line enters a room from the left. A single orange line leaves the room and curves back the other way: what comes back." xmlns="http://www.w3.org/2000/svg">
+<defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity=".06"/></pattern></defs>
+<rect width="1200" height="600" fill="#0b0b0d"/>
+<rect width="1200" height="520" fill="url(#dots)"/>
+<rect class="k" x="520" y="150" width="270" height="200" rx="6"/>
+<path class="k" d="M150 230 L520 230 M500 218 L520 230 L500 242"/>
+<path class="e" d="M790 290 C1000 290 1000 440 780 440 L170 440 M192 427 L170 440 L192 453"/>
+<text class="t" x="150" y="208">THE STORY GOES IN</text>
+<text class="t i" x="170" y="482">WHAT COMES BACK</text>
+<rect y="520" width="1200" height="80" fill="#050506"/>
+<line x1="0" y1="520" x2="1200" y2="520" stroke="#ffffff" opacity=".07"/>
+<text x="48" y="569" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="24" fill="#c9cfdd">Story on the way in. Intelligence on the way out.</text>
+<text x="1152" y="569" text-anchor="end" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#8a93ab">ah.</text>
+</svg>
+</figure>
+
+<div class="body">
+
+<p>Most briefing programs are built to send a story in one direction. The company prepares, the customer arrives, the story gets told well, everyone shakes hands. Then the room empties and almost everything the customer said leaves with them.</p>
+
+<p>I think that is half a program. A briefing should tell the company's story on the way in and return customer intelligence to the business on the way out.</p>
+
+<h2>What a program is worth</h2>
+
+<p>When I map what a briefing program delivers to the business, it comes to five things. Most programs reach three. Strong ones add the fourth. Almost none have built the fifth.</p>
+
+<figure>
+<div class="rows">
+<div class="r"><b>Pipeline source</b><span>Creates and accelerates revenue, credited by tagging attendees in CRM.</span></div>
+<div class="r"><b>Deal accelerator</b><span>Deals a briefing touches close faster than deals it doesn't. That gap is the number a CFO asks about.</span></div>
+<div class="r"><b>Retention anchor</b><span>Executive relationships that survive product transitions, leadership changes and competitive pressure.</span></div>
+<div class="r"><b>Enablement hub</b><span>Makes discussion leaders sharp and account teams look like advisors.</span></div>
+<div class="r hot"><b>Intelligence</b><span>A living record of what customers told you, growing with every visit and searchable by anyone who needs it.</span></div>
+</div>
+<figcaption>The first four are about what the room does for the deal. The fifth is about what the room teaches the company.</figcaption>
+</figure>
+
+<h2>Why the fifth one never got built</h2>
+
+<p>Everyone agrees with it in principle. In practice it has always lost to arithmetic. Capturing what was said, structuring it, and getting it to product, sales and marketing in a form they will read is hours of synthesis per briefing. The team that would do that work is already preparing the next visit. So the notes sit in a folder, and the best customer signal the company heard that month reaches nobody who could act on it.</p>
+
+<p>The handoffs are lossy by default. Product hears a secondhand summary. Marketing hears nothing. The account team remembers what mattered to the account team.</p>
+
+<h2>What changes now</h2>
+
+<p>Synthesis is the thing agentic AI makes cheap. A system can take the notes and the transcript, pull out what each executive said about priorities, objections and timing, and route it. Product gets the feature signal. Sales gets the next steps and the attribution. Marketing gets the language customers used. The customer gets a follow-up that reflects what they said, not a generic thank-you.</p>
+
+<p>A person still certifies what goes out. What a customer says in a briefing is said in confidence, and deciding what travels, and to whom, is a judgment call. I would not hand that to software.</p>
+
+<p>But the economics have flipped. The loop used to be the first thing cut. It can now be a standard output of every visit, and it compounds. After a year you have a record of what your most important customers told you, in their words, that no survey or CRM field comes close to.</p>
+
+<p>A program that only sends a story in is a cost center with good hospitality. A program that sends intelligence back is something the business would miss.</p>
+
+</div>
+<div class="sig"><span class="fwd">Always forward</span><br><br>If you run customer programs or executive engagement and you are working through this inside your own team, I'd like to compare notes.</div>
+</article>
+
+<div class="next"><div class="inner">
+<p>Operator Notes is where I write about customer programs, operator judgment, and agentic AI in production. New pieces land here first.</p>
+<a class="btn" href="/writing/">More Operator Notes</a>
+</div></div>
+
+<footer><div class="wrap">
+<span>© 2026 Andrew J. Hahm</span>
+<span><a href="/">andrewhahm.com</a> · <a href="https://linkedin.com/in/andrew-hahm">LinkedIn</a></span>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Number for a Briefing Program | Andrew Hahm</title>
+<meta name="description" content="Briefings held and attendee surveys do not survive a budget review. One metric that bakes quality into the count, the rubric behind it, and how it ladders to revenue.">
+<meta property="og:title" content="One Number for a Briefing Program">
+<meta property="og:description" content="Briefings held and attendee surveys do not survive a budget review. One metric that bakes quality into the count, the rubric behind it, and how it ladders to revenue.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://andrewhahm.com/writing/one-number-for-a-briefing-program/">
+<style>
+:root{--bg:#050506;--bg2:#0b0b0d;--panel:#111114;--line:rgba(255,255,255,.07);--ink:#e9edf6;--dim:#8a93ab;--faint:#59627a;--gold:#ff7a2f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+::selection{background:rgba(255,122,47,.3)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,6,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:Outfit,Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
+.logo .wm-l{font-weight:200}.logo .wm-b{font-weight:700}.logo .wm-d{font-weight:700;color:var(--gold)}
+nav a.lnk{font-size:13px;color:var(--dim);text-decoration:none;margin-left:26px;letter-spacing:.6px;transition:color .25s}
+nav a.lnk:hover{color:var(--gold)}
+nav a.lnk.here{color:var(--gold)}
+.article{max-width:720px;margin:0 auto;padding:130px 28px 90px}
+.kicker{font-size:13px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:22px;font-weight:500}
+h1{font-size:42px;font-weight:300;line-height:1.16;letter-spacing:-.8px}
+h1 b{font-weight:700}
+.meta{color:var(--faint);font-size:14px;margin-top:18px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+.meta a{color:var(--dim);text-decoration:none}
+.hero-fig{margin:34px 0 0}
+.hero-fig svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px}
+.hero-fig .k{stroke:#e9edf6;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.hero-fig .kf{fill:#e9edf6;opacity:.85}
+.hero-fig .kl{stroke:#e9edf6;stroke-width:2;fill:none;opacity:.3}
+.hero-fig .d{stroke:#8a93ab;stroke-width:1.5;fill:none;stroke-dasharray:3 7}
+.hero-fig .e{stroke:#ff7a2f;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-fig .ef{fill:#ff7a2f}
+.hero-fig .t{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:1.5px;fill:#8a93ab}
+.hero-fig .t.i{fill:#e9edf6}
+.body{margin-top:38px;font-size:17.5px;font-weight:300;color:var(--ink)}
+.body p{margin-bottom:24px}
+.body b{font-weight:700;color:#fff}
+.body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(255,122,47,.35)}
+.body h2{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin:44px 0 18px}
+.body figure{margin:38px 0}
+.body figure svg{width:100%;height:auto;display:block}
+.body figcaption{color:var(--faint);font-size:13px;margin-top:12px;letter-spacing:.3px;font-weight:400}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+.card .n{font-size:11px;letter-spacing:3px;color:var(--faint);text-transform:uppercase;font-weight:600}
+.card h3{font-size:17px;font-weight:600;margin:8px 0 6px;color:#fff;line-height:1.3}
+.body .card p{font-size:14px;color:var(--dim);margin:0;line-height:1.5}
+.card .does{display:block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.4px;color:var(--ink);font-weight:400}
+.card.hot{border-color:rgba(255,122,47,.55)}
+.card.hot .n{color:var(--gold)}
+.g4 .card{padding:18px 14px}
+.g4 .card h3{font-size:15.5px}
+.rows{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rows .r{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:14px 18px;background:var(--panel);border-top:1px solid var(--line);font-size:14.5px;line-height:1.5}
+.rows .r:first-child{border-top:0}
+.rows .r b{color:#fff;font-weight:600}
+.rows .r span{color:var(--dim)}
+.rows .r.hot b{color:var(--gold)}
+.rows.c3 .r{grid-template-columns:160px 1fr 1fr}
+.rows .r.hd{background:transparent;font-size:11px;letter-spacing:2.5px;text-transform:uppercase}
+.rows .r.hd b,.rows .r.hd span{color:var(--faint);font-weight:600}
+.pull{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:21px;color:#c9cfdd;border-left:2px solid var(--gold);padding-left:22px;margin:34px 0}
+.sig{margin-top:44px;padding-top:30px;border-top:1px solid var(--line);color:var(--dim);font-size:15px}
+.sig .fwd{color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+.next{background:var(--bg2);border-top:1px solid var(--line);padding:54px 0}
+.next .inner{max-width:720px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+.next p{color:var(--dim);font-size:15px;max-width:420px}
+.next a.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-decoration:none;padding:11px 22px;font-size:14px;letter-spacing:.6px;border-radius:4px;transition:all .25s}
+.next a.btn:hover{background:var(--gold);color:#050506}
+footer{padding:44px 0;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--faint);font-size:12px;letter-spacing:.4px}
+footer a{color:var(--dim);text-decoration:none}
+@media(max-width:780px){h1{font-size:32px}.article{padding-top:110px}.g2,.g3,.g4{grid-template-columns:1fr}.rows .r,.rows.c3 .r{grid-template-columns:1fr;gap:4px}.rows .r.hd{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="/"><span class="wm-l">andrew</span><span class="wm-b">hahm</span><span class="wm-d">.</span></a><div>
+<a class="lnk" href="/#work">What I do</a><a class="lnk" href="/#advisory">Advising</a><a class="lnk here" href="/writing/">Writing</a><a class="lnk" href="/#contact">Contact</a>
+</div></div></nav>
+
+<article class="article">
+<div class="kicker">Operator Notes · The function</div>
+<h1>One Number for a Briefing <b>Program.</b></h1>
+<div class="meta">Andrew Hahm · September 2026 · 3 minute read</div>
+
+<figure class="hero-fig">
+<svg viewBox="0 0 1200 600" role="img" aria-label="Fourteen dots scattered above and below a single orange horizontal line. The ones above the line are solid and count. The ones below are faint and do not." xmlns="http://www.w3.org/2000/svg">
+<defs><pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity=".06"/></pattern></defs>
+<rect width="1200" height="600" fill="#0b0b0d"/>
+<rect width="1200" height="520" fill="url(#dots)"/>
+<line class="e" x1="130" y1="270" x2="1070" y2="270"/>
+<circle class="kf" cx="200" cy="190" r="14"/><circle class="kf" cx="330" cy="140" r="14"/><circle class="kf" cx="450" cy="215" r="14"/><circle class="kf" cx="580" cy="170" r="14"/><circle class="kf" cx="700" cy="120" r="14"/><circle class="kf" cx="820" cy="200" r="14"/><circle class="kf" cx="950" cy="160" r="14"/>
+<circle class="kl" cx="260" cy="340" r="14"/><circle class="kl" cx="390" cy="400" r="14"/><circle class="kl" cx="520" cy="330" r="14"/><circle class="kl" cx="650" cy="410" r="14"/><circle class="kl" cx="770" cy="350" r="14"/><circle class="kl" cx="890" cy="395" r="14"/><circle class="kl" cx="1010" cy="335" r="14"/>
+<text class="t i" x="130" y="252">THE BAR</text>
+<text class="t" x="1070" y="100" text-anchor="end">THESE COUNT</text>
+<text class="t" x="1070" y="462" text-anchor="end">THESE DON'T</text>
+<rect y="520" width="1200" height="80" fill="#050506"/>
+<line x1="0" y1="520" x2="1200" y2="520" stroke="#ffffff" opacity=".07"/>
+<text x="48" y="569" font-family="Georgia,'Times New Roman',serif" font-style="italic" font-size="24" fill="#c9cfdd">Hold the bar. Watch the number climb.</text>
+<text x="1152" y="569" text-anchor="end" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#8a93ab">ah.</text>
+</svg>
+</figure>
+
+<div class="body">
+
+<p>Measurement has always been the soft spot of executive briefing programs. We count briefings held. We survey attendees. We collect quotes from happy account teams. All of it is true, and little of it survives a budget review.</p>
+
+<p>Adding AI makes the old counts worse. If the pitch is "we can run more briefings," a skeptical CFO hears "more of something we could not value before." Volume alone invites the obvious question about quality, and quality alone does not scale.</p>
+
+<h2>The number</h2>
+
+<p>The one I would put at the top of the page is <b>quality-bar throughput</b>: the number of bespoke briefings each operator delivers per quarter that clear a fixed quality rubric.</p>
+
+<p>It works because it can't be gamed in either direction. Ship more junk and the number does not move, because junk does not clear. Polish one showpiece and the number does not move, because volume counts. The only way to raise it is to do more good work.</p>
+
+<h2>It needs a written definition of good</h2>
+
+<p>The metric depends on something most programs have never written down: what "good" means, specifically enough that two reviewers would score the same briefing the same way. These are the six dimensions I use.</p>
+
+<figure>
+<div class="rows">
+<div class="r hot"><b>Accuracy</b><span>Every fact, figure and attribution verified against a source. Any failure blocks.</span></div>
+<div class="r"><b>Personalization</b><span>Unmistakably built for this executive and this account.</span></div>
+<div class="r"><b>Strategic relevance</b><span>The agenda maps to a decision the customer is facing, not a product tour.</span></div>
+<div class="r"><b>Narrative quality</b><span>One story with a through-line, not a pile of slides.</span></div>
+<div class="r"><b>Experience</b><span>On brand, on tone, designed as a visit and not a document dump.</span></div>
+<div class="r"><b>The loop</b><span>Real intelligence goes back to the business, and a real follow-up goes to the customer.</span></div>
+</div>
+<figcaption>A briefing clears the bar or it doesn't. Accuracy is binary. The other five are scored.</figcaption>
+</figure>
+
+<h2>How it connects to revenue</h2>
+
+<p>Throughput is the leading indicator, the one you can watch monthly. It ladders up to the three outcomes leadership funds.</p>
+
+<figure>
+<div class="grid g3">
+<div class="card"><span class="n">Tier one</span><h3>Direct</h3><p>Opportunities created after a briefing, credited by tagging every attendee in CRM.</p></div>
+<div class="card"><span class="n">Tier two</span><h3>Acceleration</h3><p>The velocity gap between deals a briefing touched and deals it didn't.</p></div>
+<div class="card"><span class="n">Tier three</span><h3>Relationship</h3><p>Retention and expansion in accounts with real executive relationships.</p></div>
+</div>
+<figcaption>Three tiers of attribution. Direct is the easiest to defend. Relationship is the largest and the slowest to show.</figcaption>
+</figure>
+
+<p>At Teradata, disciplined attribution is how the briefing program went from unranked to the company's number one source of marketing-sourced pipeline. The method was not exotic. Tag every attendee, credit the opportunities that follow, report it the same way every quarter.</p>
+
+<h2>Start with your own baseline</h2>
+
+<p>I have looked for a rigorous public study that puts a clean win-rate number on briefing programs, and I have not found one I would stake a budget on. So lead with your own before and after. Hand-grade last quarter's briefings against the rubric before you change anything. That grade is the baseline, and everything you do next is measured against it.</p>
+
+<p>Hold the bar. Watch the number climb.</p>
+
+</div>
+<div class="sig"><span class="fwd">Always forward</span><br><br>If you run customer programs or executive engagement and you are working through this inside your own team, I'd like to compare notes.</div>
+</article>
+
+<div class="next"><div class="inner">
+<p>Operator Notes is where I write about customer programs, operator judgment, and agentic AI in production. New pieces land here first.</p>
+<a class="btn" href="/writing/">More Operator Notes</a>
+</div></div>
+
+<footer><div class="wrap">
+<span>© 2026 Andrew J. Hahm</span>
+<span><a href="/">andrewhahm.com</a> · <a href="https://linkedin.com/in/andrew-hahm">LinkedIn</a></span>
+</div></footer>
+</body>
+</html>
